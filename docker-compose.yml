@@ -1,0 +1,10 @@
+version: "3"
+services:
+    iva:
+        image: "iva:latest"
+        restart: always
+        container_name: iva
+        ports: 
+          - 80:80
+        volumes: 
+          - ./logs:/var/log/nginx
