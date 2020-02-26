@@ -7,6 +7,8 @@ MAINTAINER IVA "admin@ivaer.com"
 ENV TZ=Asia/Shanghai
 RUN ln -sf /usr/share/zoneinfo/{TZ} /etc/localtime && echo "{TZ}" > /etc/timezone
 
+RUN npm run build
+
 # copy编译好的文件到Nginx容器
 COPY /dist /www/iva.com/
 
